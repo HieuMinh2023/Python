@@ -1,0 +1,32 @@
+#variable declaration
+First_Number = 3
+Last_Number = 999999
+Step = 1
+
+print('First number: ', First_Number)
+print('Last number: ', Last_Number)
+print('Step: ',Step)
+
+#1st way: using formula
+#Number of Items
+Items = int((Last_Number - First_Number) / Step + 1)
+print('\nTotal numbers in the sequece: ', Items)
+
+#Sum
+Sum = int((Last_Number + First_Number) * Items / 2)
+print('Sum of the number in sequence (formula)', Sum)
+
+#2nd way: using iteration (or loop)
+number = First_Number
+Sum = 0
+series = ''
+
+#using for iteration
+for i in range(First_Number, Last_Number+1, Step):
+    Sum = Sum + i    
+    series = series + '\n' + str(i)
+
+    
+print('Sum of the number in sequence (iteration) ',Sum)
+
+print('The sequence of numbers is as below:',series)
